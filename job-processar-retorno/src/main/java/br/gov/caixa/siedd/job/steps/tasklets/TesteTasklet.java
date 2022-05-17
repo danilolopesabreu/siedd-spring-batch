@@ -1,4 +1,4 @@
-package br.gov.caixa.siedd.tasklet;
+package br.gov.caixa.siedd.job.steps.tasklets;
 
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.configuration.annotation.StepScope;

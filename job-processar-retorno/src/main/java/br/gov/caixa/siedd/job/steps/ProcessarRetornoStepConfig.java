@@ -1,4 +1,4 @@
-package br.gov.caixa.siedd.step;
+package br.gov.caixa.siedd.job.steps;
 
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
