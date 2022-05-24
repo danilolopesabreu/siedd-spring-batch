@@ -1,8 +1,8 @@
-package br.gov.caixa.siedd.domain.leiaute;
+package br.gov.caixa.siedd.domain.leiautes.d05fduni;
 
 /**
  * Classe que representa o layout: D05FDUNI – Remessa de Agendamentos/Lançamentos
  * */
-public class LeiauteUnico {
+public class D05FDUNI {
 	//todo
 }
