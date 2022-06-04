@@ -5,5 +5,5 @@ package br.gov.caixa.siedd.domain.leiautes.d05fduni;
  * */
 public class D05FDUNI {
 	private D05FDUNIHeader header;
-	private D05FDUNITrailler trailler;
+	private D05FDUNITrailler trailler;//TODO
 }
