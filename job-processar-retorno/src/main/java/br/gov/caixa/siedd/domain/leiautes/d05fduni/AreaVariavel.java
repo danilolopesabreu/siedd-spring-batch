@@ -1,5 +1,7 @@
 package br.gov.caixa.siedd.domain.leiautes.d05fduni;
 
-public interface AreaVariavel {
+import br.gov.caixa.siedd.domain.util.SpringRange;
+
+public interface AreaVariavel extends SpringRange {
 
 }
