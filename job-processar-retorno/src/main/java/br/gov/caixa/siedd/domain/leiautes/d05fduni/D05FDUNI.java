@@ -7,34 +7,36 @@ import br.gov.caixa.siedd.domain.util.SpringRange;
 /**
  * Classe que representa o layout: D05FDUNI – Remessa de Agendamentos/Lançamentos
  */
-public class D05FDUNI implements SpringRange {
+public class D05FDUNI  {
 	
-	private D05FDUNIHeader header;
-	private D05FDUNITrailler trailler;
+	private Header header;
+	private AreaFixa areaFixa;
+	private Trailler trailler;
 
-	public D05FDUNIHeader getHeader() {
+	public Header getHeader() {
 		return header;
 	}
 
-	public void setHeader(D05FDUNIHeader header) {
+	public void setHeader(Header header) {
 		this.header = header;
 	}
 
-	public D05FDUNITrailler getTrailler() {
+	public Trailler getTrailler() {
 		return trailler;
 	}
 
-	public void setTrailler(D05FDUNITrailler trailler) {
+	public void setTrailler(Trailler trailler) {
 		this.trailler = trailler;
 	}
-
-	@Override
-	public Range[] getRange() {
-		return SpringRange.concatWithArrayCopy(
-						  this.header.getRange()
-						, this.trailler.getRange());
-	}
 	
+	public AreaFixa getAreaFixa() {
+		return areaFixa;
+	}
+
+	public void setAreaFixa(AreaFixa areaFixa) {
+		this.areaFixa = areaFixa;
+	}
+
 	public static void main(String[] args) {
 		Range[] arrayConcat = SpringRange.concatWithArrayCopy(
 					  new Range[]{ new Range(1,2),  new Range(3,4 )}
