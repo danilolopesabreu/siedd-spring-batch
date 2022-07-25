@@ -1,5 +1,9 @@
 package br.gov.caixa.siedd.domain.leiautes.d05fduni;
 
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import org.springframework.batch.item.file.transform.Range;
 
 public class Header {
@@ -31,7 +35,13 @@ public class Header {
 				,new Range(46,1000)
 			};
 	}
-
+	
+	public static String[] getPropertiesName() {
+		final List<String> propriedades = Stream.of(new Header().getClass().getDeclaredFields())
+				.map(x -> x.getName() ).collect(Collectors.toList());
+		return (String[]) propriedades.toArray();
+	}
+	
 	public short getTpRegistro() {
 		return tpRegistro;
 	}

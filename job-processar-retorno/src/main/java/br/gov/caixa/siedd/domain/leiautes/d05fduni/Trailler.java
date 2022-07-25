@@ -1,5 +1,9 @@
 package br.gov.caixa.siedd.domain.leiautes.d05fduni;
 
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import org.springframework.batch.item.file.transform.Range;
 
 public class Trailler {
@@ -20,6 +24,12 @@ public class Trailler {
 				,new Range(55,71)
 				,new Range(72,1000)
 			};
+	}
+	
+	public static String[] getPropertiesName() {
+		final List<String> propriedades = Stream.of(new Trailler().getClass().getDeclaredFields())
+				.map(x -> x.getName() ).collect(Collectors.toList());
+		return (String[]) propriedades.toArray();
 	}
 
 	public short getTpRegistro() {
