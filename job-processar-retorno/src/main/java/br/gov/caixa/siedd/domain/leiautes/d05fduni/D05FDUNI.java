@@ -49,4 +49,11 @@ public class D05FDUNI  {
 			System.out.println(arrayConcat[i]);
 		}
 	}
+
+	@Override
+	public String toString() {
+		return "D05FDUNI [header=" + header + ", areaFixa=" + areaFixa + ", trailler=" + trailler + "]";
+	}
+	
+	
 }
